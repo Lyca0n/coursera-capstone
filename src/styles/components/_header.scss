@@ -1,5 +1,11 @@
 .header {
-  background: $dark-blue;
+  background: $deep-violet;
+}
+
+.header__container {
+  margin: 0 auto;
+  padding: 0 $m-size;
+  max-width: 100vh;
 }
 
 .header__content {
@@ -10,9 +16,23 @@
 }
 
 .header__title {
-  color: white;
+  color: $neutral-teal;
   text-decoration: none;
   h1 {
+    margin: 0;
+  }
+}
+
+
+.header__nav {
+  color: $off-white;
+  border-radius: 3px;
+  background: $soft-purpule;
+  text-decoration: none;
+  margin : 0%;
+  padding-right: $s-size;
+  padding-left: $s-size;
+  a {
     margin: 0;
   }
 }
