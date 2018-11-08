@@ -1,9 +1,11 @@
 .text-input {
-  border: 1px solid #cacccd;
-  height: 50px;
+  border: 1px solid #ced4da;
+  
   font-size: $font-size-large;
   font-weight: 300;
-  padding: $s-size;
+  border-radius: .25rem;
+  padding: $s-size;  
+  margin: 2px;
 }
 
 .select {

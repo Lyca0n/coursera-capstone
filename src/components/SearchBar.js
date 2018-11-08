@@ -5,7 +5,7 @@ class SearchBar extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            term:null
+            term:''
         };
     }
 
@@ -18,13 +18,13 @@ class SearchBar extends React.Component {
         return(
             <div className="search-bar">
             <form onSubmit={this.onSubmit}>
-                <input className="search-bar__input"
+                <input className="text-input search-bar__input"
                     value={this.state.term}
                     onChange={this.onTermChange}
-                    type="number"
-                    placeholder="Amount"
+                    type="text"
+                    placeholder="Search.. Lists, Friends, Events"
                 />
-                <button className="search-bar__button">Search</button>
+                <button className="search-bar__button button">Search</button>
             </form>
         
             </div>
