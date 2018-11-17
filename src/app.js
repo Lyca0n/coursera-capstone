@@ -11,6 +11,7 @@ import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { startSetLists } from './actions/lists';
 
 const store = configureStore();
 const jsx = (
@@ -32,12 +33,13 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(login(user.uid));
     renderApp();
+    store.dispatch(startSetLists());
     if (history.location.pathname === '/') {
       history.push('/dashboard');
     }
   } else {
     store.dispatch(logout());
-    renderApp();
+    renderApp();    
     history.push('/');
   }
 });
