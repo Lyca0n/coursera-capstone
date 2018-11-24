@@ -1,11 +1,12 @@
 import React from 'react';
+import { FormGroup, Col, Row, Form, Button, Input } from 'reactstrap';
 
 class SearchBar extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            term:''
+            term: ''
         };
     }
 
@@ -14,22 +15,29 @@ class SearchBar extends React.Component {
         this.setState(() => ({ term }));
     };
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="search-bar">
-            <form onSubmit={this.onSubmit}>
-                <input className="text-input search-bar__input"
-                    value={this.state.term}
-                    onChange={this.onTermChange}
-                    type="text"
-                    placeholder="Search.. Lists, Friends, Events"
-                />
-                <button className="search-bar__button button">Search</button>
-            </form>
-        
+                <Form inline onSubmit={this.onSubmit}>
+                    <Row form>
+                        <Col md={12}>
+                            <FormGroup>
+                                <Input className=" search-bar__input"
+                                    value={this.state.term}
+                                    onChange={this.onTermChange}
+                                    type="text"
+                                    placeholder="Search.. Lists, Friends, Events"
+                                />&nbsp;
+                                <Button className="search-bar__button ">Search</Button>
+                            </FormGroup>                            
+                        </Col>
+                    </Row>
+                </Form>
             </div>
         );
-        
+
     }
-} 
-export default SearchBar
+}
+
+
+export default SearchBar;
