@@ -16,10 +16,10 @@ class MyLists extends React.Component {
                                 <ListGroupItem>No Expenses</ListGroupItem>
                             ):(
                                 this.props.lists.map((list)=>{
-                                    return <ListGroupItem key={list.id}> {list.name}</ListGroupItem>
+                                    console.log(list);
+                                    return <ListGroupItem key={list.id}> {list.desc} </ListGroupItem>
                                 })
-                            )}
-                            
+                            )}                            
                         </ListGroup>
                     </Col>
                 </Row>

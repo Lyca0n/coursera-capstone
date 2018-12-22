@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import MyLists from './MyLists'
 
 const ListsPage = () => (
     <Container>
         <Row>
-            <Col>.col</Col>
+            <Col><MyLists /></Col>
         </Row>
 
         <Row>
